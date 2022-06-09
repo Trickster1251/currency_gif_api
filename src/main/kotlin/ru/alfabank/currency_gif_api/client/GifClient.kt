@@ -9,5 +9,5 @@ import java.net.URI
 @FeignClient(name = "Gif", url = "https://api.giphy.com/")
 interface GifClient {
     @GetMapping(consumes = [MediaType.APPLICATION_JSON_VALUE])
-    fun getGif(baseUrl: URI): Gif
+    fun getGif(baseUrl: URI): Gif?
 }
